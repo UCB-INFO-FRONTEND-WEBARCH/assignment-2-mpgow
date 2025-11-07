@@ -13,9 +13,9 @@ export default function TaskForm({ onAddTask }) {
         }
     }
     return (
-        <form onSubmit={submitHandler} className="task-form">
-            <input value={value} onChange={e => setValue(e.target.value)}/>
-            <button type="submit">+ add task</button>
+        <form className="task-form" onSubmit={submitHandler} >
+            <input className="task-input" type="text" placeholder="task" value={value} onChange={e => setValue(e.target.value)}/>
+            <button className="task-button" type="submit">+ add</button>
         </form>
     );
 }
